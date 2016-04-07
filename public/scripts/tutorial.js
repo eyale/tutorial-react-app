@@ -5,6 +5,7 @@ var CommentList = React.createClass({
         <Comment author={comment.author} key={comment.id}>
           {comment.text}
         </Comment>
+
       )
     });
     return (
@@ -25,9 +26,29 @@ var data = [
     id:2,
     author: 'Jordan',
     text: 'Jordan some text'
+  },
+  {
+    id:3,
+    author: 'Den',
+    text: 'Den some text'
   }
 ];
 
+// https://facebook.github.io/react-native/docs/image.html
+// renderImages: function() {
+//   return (
+//     <View>
+//       <Image
+//         style={styles.icon}
+//         source={require('./myIcon.png')}
+//       />
+//       <Image
+//         style={styles.logo}
+//         source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}}
+//       />
+//     </View>
+//   );
+// },
 var Comment = React.createClass({
   render: function () {
     return (

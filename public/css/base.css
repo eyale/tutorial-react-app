@@ -62,10 +62,15 @@ ul {
 }
 
 .commentBox {
-  background: rgba(0,0,0,.1);
+  background: beige;
   padding: 10px;
+  box-shadow: 0 3px 15px 0px rgba(0,0,0,.3);
 }
 
 .commentList {
-  border:1px solid;
+  border-left:1px solid;
+  padding-bottom: 15px;
+}
+.comment {
+  border-bottom: 1px solid grey;
 }
