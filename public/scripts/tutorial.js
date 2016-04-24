@@ -1,5 +1,5 @@
 // 2) THE ARRAY OF DATA TO RENDER AS DATA OF NEWS
-var news_list = [{
+var newsList = [{
     author: 'Alex',
     text: 'At the Monday....'
 },{
@@ -14,7 +14,7 @@ var news_list = [{
 var News = React.createClass({
   render: function () {
     // 4) MAKING THE HOLDER TO HOLD THE DATA AFTER BUSTING ARRAY
-      var news_array_holder_to_render = this.props.news_array.map(function(index, elem) {
+      var newsArrayHolderToRender = this.props.newsArray.map(function(index, elem) {
         return (
           <div key={elem}>
             <p>{index.author}</p>
@@ -25,7 +25,9 @@ var News = React.createClass({
       // 5) THE MAIN RETURN FROM THE NEWS COMPONENT THAT
       //    WE HAVE TO TRANSFER TO OUTSIDE
       //    IN OUR CASE TO App COMPONENT
-     return (<div>{news_array_holder_to_render}</div>)
+
+      console.log(newsArrayHolderToRender);
+     return (<div>{newsArrayHolderToRender}</div>)
   }
 });
 
@@ -43,7 +45,7 @@ var App = React.createClass({
      return (
       <div>
         <h1>-----App-THE-MAIN-COMPONENT-----</h1>
-        <News news_array={news_list} />
+        <News newsArray={newsList} />
         <Comments />
       </div>
      )
